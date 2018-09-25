@@ -4,9 +4,8 @@ const path = require('path');
 const http = require('http');
 const uuidv4 = require('uuid/v4');
 const bodyParser = require('body-parser');
-var passportSocketIo = require("passport.socketio");
-var passport = require('passport'); 
-const MongoClient = require('mongodb').MongoClient;
+
+
 
 
 const app = express();
@@ -19,15 +18,9 @@ var io = socketIo(server);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-MongoClient.connect('mongodb://127.0.0.1:27017/Chat',(err,client)=>{
- if(err){
-     console.log(err);
-      return console.log('unable to connect to the MongoDb server');
-      
- }
-  const db =client.db('Chat');
 
-  console.log('connected to the MongoDb server');
+
+
   var server = http.createServer(app);
   var io = socketIo(server);
 
@@ -86,4 +79,3 @@ MongoClient.connect('mongodb://127.0.0.1:27017/Chat',(err,client)=>{
   });
 
 
-});
