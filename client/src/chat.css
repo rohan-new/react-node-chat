@@ -1,0 +1,63 @@
+
+            .clear
+            {
+                clear: both;
+            }
+
+            /* new ccss */
+
+        
+            .chat-sender.msg {
+                -webkit-clip-path: polygon(12px 0, 100% 0, 100% 100%, 0 100%, 12px 70%);
+                clip-path: polygon(12px 0, 100% 0, 100% 100%, 0 100%, 12px 70%);
+                padding: 6px 6px;
+                padding-left: 21px;
+                background-color: #5D5D5D;
+                color: #fff;
+                box-sizing: border-box;
+                width: 150px;
+                margin-left: -9px;
+              }
+              
+              
+              
+              .chat-sender {
+                display: inline-block;
+                vertical-align: top;
+              }
+              
+
+
+
+              .chat-sender.msgs {
+                -webkit-clip-path: polygon(12px 0, 100% 0, 100% 100%, 0 100%, 12px 70%);
+                clip-path: polygon(12px 0, 100% 0, 100% 100%, 0 100%, 12px 70%);
+                padding: 6px 6px;
+                padding-left: 21px;
+                background-color: #5D5D5D;
+                color: #fff;
+                box-sizing: border-box;
+                width: 150px;
+                margin-left: -9px;
+                float: right;
+              }
+              
+              
+              
+              .chat-senders {
+                display: inline-block;
+                
+              }
+              .texts{
+                font-size: 9px
+              }
+              
+              
+              
+              
+              
+              
+              
+              
+              
+  
