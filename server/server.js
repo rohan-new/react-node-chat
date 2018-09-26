@@ -2,7 +2,6 @@ const express = require('express');
 const socketIo = require('socket.io');
 const path = require('path');
 const http = require('http');
-const uuidv4 = require('uuid/v4');
 const bodyParser = require('body-parser');
 
 
@@ -17,6 +16,14 @@ var io = socketIo(server);
 // Middlewares
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.static(path.join(__dirname, "client/build")))
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+});
+
+
+
 
 
 
