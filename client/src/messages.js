@@ -15,8 +15,6 @@ class Messages extends Component{
         var name,username = [];
         var name = this.props.username ;
         var username = this.props.user ;
-        console.log(name);
-        console.log(username);
         var user = username[username.length - 1] ;
 
          

@@ -3,19 +3,19 @@ const socketIo = require('socket.io');
 const path = require('path');
 const http = require('http');
 const bodyParser = require('body-parser');
-
-
-
-
 const app = express();
 const port = process.env.PORT ||3001 ;
 const pathjoin = path.join(__dirname, '../public');
 var server = http.createServer(app);
 var io = socketIo(server);
 
+var io = socketIo(server);
+
 // Middlewares
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+
+
 
 if(process.env.NODE_ENV === 'production'){
 
@@ -28,13 +28,6 @@ app.get("*", (req, res) => {
 }
 
 
-
-
-
-
-
-  var server = http.createServer(app);
-  var io = socketIo(server);
 
   io.on('connection',(socket)=>{
     console.log('New socket Connection with id' + socket.id);
